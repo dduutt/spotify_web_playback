@@ -1,9 +1,9 @@
 import axios from 'axios';
 
 const instance = axios.create({
-    baseURL: process.env.REACT_APP_KV_REST_API_URL,
+    baseURL: process.env.KV_REST_API_URL,
     headers: {
-        Authorization: `Bearer ${process.env.REACT_APP_KV_REST_API_TOKEN}`,
+        Authorization: `Bearer ${process.env.KV_REST_API_TOKEN}`,
     },
 });
 
