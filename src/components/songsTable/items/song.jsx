@@ -54,16 +54,16 @@ const song = props => {
         <p>
           {props.item.artists
             ? props.item.artists.map((a, i) => (
-                <span key={i}>
-                  <span
-                    className="artist"
-                    onClick={() => props.onArtistClick(a.id)}
-                  >
-                    {a.name}
-                  </span>
-                  {artists !== i + 1 ? <span>, </span> : null}
+              <span key={i}>
+                <span
+                  className="artist"
+                  onClick={() => props.onArtistClick(a.id)}
+                >
+                  {a.name}
                 </span>
-              ))
+                {artists !== i + 1 ? <span>, </span> : null}
+              </span>
+            ))
             : ""}
         </p>
       </div>
@@ -73,7 +73,7 @@ const song = props => {
             className="album"
             onClick={() => props.onAlbumClick(props.item.album.id)}
           >
-            {props.item.album.name}
+            {props.item.album ? props.item.album.name : ""}
           </p>
         </div>
       )}
