@@ -10,6 +10,8 @@ const instance = axios.create({
 
 
 const kv = (data) => {
+
+    console.log(data, process.env)
     return new Promise((resolve, reject) => {
         instance.post('', data)
             .then(response => {
