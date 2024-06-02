@@ -2,16 +2,14 @@ import axios from 'axios';
 
 const instance = axios.create({
 
-    baseURL: process.env.REACT_APP_KV_REST_API_URL,
+    baseURL: process.env.REACT_APP_REST_API_URL,
     headers: {
-        Authorization: `Bearer ${process.env.REACT_APP_KV_REST_API_TOKEN}`,
+        Authorization: `Bearer ${process.env.REACT_APP_REST_API_TOKEN}`,
     },
 });
 
 
 const kv = (data) => {
-
-    console.log(data, process.env)
     return new Promise((resolve, reject) => {
         instance.post('', data)
             .then(response => {
